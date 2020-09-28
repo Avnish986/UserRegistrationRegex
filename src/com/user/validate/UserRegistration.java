@@ -40,7 +40,15 @@ public class UserRegistration {
 		else
 			System.out.println("Invalid Email");
 		
-		
+		System.out.println("Enter ph no.");
+		String phNo = s.nextLine();
+		Pattern pattern3 = Pattern.compile("^[0-9]{2}[ ]{1}[0-9]{10}$");
+		Matcher matcher3 = pattern3.matcher(phNo);
+		boolean matchFound3 = matcher3.find();
+		if(matchFound3)
+			System.out.println("Valid Ph no");
+		else
+			System.out.println("Invalid Ph no");
 	}
 }
 
