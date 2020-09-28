@@ -5,7 +5,6 @@ import java.util.regex.Pattern;
 public class UserRegistration {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		System.out.println("Welcome to User registration");
 		System.out.println("Enter First Name");
 		Scanner s=new Scanner(System.in);
@@ -15,12 +14,22 @@ public class UserRegistration {
 
 		boolean matchFound=matcher.find();
 		if(matchFound)
-		{
-		System.out.println("Valid");
-		}
+		System.out.println("Valid First Name");
 		else
-		System.out.println("Invalid");
-		}
+		System.out.println("Invalid First Name");
+
+		String lname=s.nextLine();
+		Pattern pattern1=Pattern.compile("^[A-Z]{1}[a-z]{2,}");
+		Matcher matcher1=pattern1.matcher(lname);
+
+		boolean matchFound1=matcher1.find();
+		if(matchFound1)
+		System.out.println("Valid last Name");
+
+		else 
+		System.out.println("Invalid last Name");
+
 	}
+}
 
 
