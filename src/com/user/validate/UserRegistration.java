@@ -49,6 +49,17 @@ public class UserRegistration {
 			System.out.println("Valid Ph no");
 		else
 			System.out.println("Invalid Ph no");
+		
+		System.out.println("Enter password");
+		String pass = s.nextLine();
+		Pattern pattern4 = Pattern.compile("^[0-9]{2}[ ]{1}[0-9]{10}$");
+		Matcher matcher4 = pattern4.matcher(pass);
+		boolean matchFound4 = matcher4.find();
+		if(matchFound4)
+			System.out.println("Valid passowrd");
+		else
+			System.out.println("Invalid password");
+		
 	}
 }
 
