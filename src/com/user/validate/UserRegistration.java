@@ -52,7 +52,7 @@ public class UserRegistration {
 		
 		System.out.println("Enter password");
 		String pass = s.nextLine();
-		Pattern pattern4 = Pattern.compile("(?=.*[A-Z])(?=.*[0-9])([a-z]*){8,}");
+		Pattern pattern4 = Pattern.compile("^(?=.{8,})([a-z]*)(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&+=]).*$");
 		Matcher matcher4 = pattern4.matcher(pass);
 		boolean matchFound4 = matcher4.find();
 		if(matchFound4)
